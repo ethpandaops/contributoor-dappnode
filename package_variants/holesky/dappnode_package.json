@@ -1,0 +1,14 @@
+{
+  "name": "contributoor-holesky.dnp.dappnode.eth",
+  "version": "0.0.1",
+  "type": "service",
+  "globalEnvs": [
+    {
+      "envs": [
+        "CONSENSUS_CLIENT_HOLESKY",
+        "EXECUTION_CLIENT_HOLESKY"
+      ],
+      "services": ["sentry"]
+    }
+  ]
+}

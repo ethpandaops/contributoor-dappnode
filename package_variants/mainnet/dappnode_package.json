@@ -1,0 +1,14 @@
+{
+  "name": "contributoor-mainnet.dnp.dappnode.eth",
+  "version": "0.0.1",
+  "type": "service",
+  "globalEnvs": [
+    {
+      "envs": [
+        "CONSENSUS_CLIENT_MAINNET",
+        "EXECUTION_CLIENT_MAINNET"
+      ],
+      "services": ["sentry"]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  sentry:
+    build:
+      context: sentry
+      args:
+        UPSTREAM_VERSION: 0.0.53
+    restart: unless-stopped
+    environment:
+      - CONTRIBUTOOR_USERNAME
+      - CONTRIBUTOOR_PASSWORD

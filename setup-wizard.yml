@@ -1,0 +1,22 @@
+version: "2"
+fields:
+  - id: contributoor_username
+    target:
+      type: environment
+      name: CONTRIBUTOOR_USERNAME
+      service: sentry
+    title: Contributoor username
+    description: >-
+      Username for the contributoor service
+    required: true
+
+  - id: contributoor_password
+    target:
+      type: environment
+      name: CONTRIBUTOOR_PASSWORD
+      service: sentry
+    title: Contributoor password
+    description: >-
+      Password for the contributoor service
+    required: true
+    secret: true
