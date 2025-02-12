@@ -12,7 +12,7 @@ RUN apk add --no-cache supervisor wget bash && \
     mkdir -p /var/log/supervisor /var/run
 
 # Download and install contributoor
-RUN wget "https://github.com/ethpandaops/contributoor/releases/download/v${UPSTREAM_VERSION}/contributoor_${UPSTREAM_VERSION}_linux_amd64.tar.gz" -O contributoor.tar.gz && \
+RUN wget "https://github.com/ethpandaops/contributoor/releases/download/${UPSTREAM_VERSION}/contributoor_${UPSTREAM_VERSION#v}_linux_amd64.tar.gz" -O contributoor.tar.gz && \
     tar -xzf contributoor.tar.gz && \
     mv sentry /usr/local/bin/contributoor && \
     chmod +x /usr/local/bin/contributoor && \

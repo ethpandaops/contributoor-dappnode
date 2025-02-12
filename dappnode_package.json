@@ -1,11 +1,11 @@
 {
   "name": "contributoor.dnp.dappnode.eth",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "upstreamVersion": "v0.0.53",
   "upstreamRepo": "ethpandaops/contributoor",
   "architectures": ["linux/amd64", "linux/arm64"],
   "license": "GPL-3.0",
-  "description": "Contributoor is a monitoring and data-gathering tool that helps improve Ethereum’s network visibility while running seamlessly alongside your beacon node.",
+  "description": "Contributoor is a monitoring and data-gathering tool that helps improve Ethereum's network visibility while running seamlessly alongside your beacon node.",
   "type": "service",
   "author": "ethPandaOps",
   "categories": ["Developer tools"],
