@@ -4,10 +4,7 @@
   "type": "service",
   "globalEnvs": [
     {
-      "envs": [
-        "CONSENSUS_CLIENT_MAINNET",
-        "EXECUTION_CLIENT_MAINNET"
-      ],
+      "envs": ["CONSENSUS_CLIENT_MAINNET", "EXECUTION_CLIENT_MAINNET"],
       "services": ["sentry"]
     }
   ]
