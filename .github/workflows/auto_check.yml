@@ -8,7 +8,7 @@ on:
       - "master"
 
 jobs:
-  build:
+  bump-upstream:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,5 +16,3 @@ jobs:
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          #PINATA_API_KEY: ${{ secrets.PINATA_API_KEY }}
-          #PINATA_SECRET_API_KEY: ${{ secrets.PINATA_SECRET_API_KEY }}
