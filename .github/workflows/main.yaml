@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Publish
-        run: npx @dappnode/dappnodesdk publish patch --dappnode_team_preset --timeout 1h --all-variants
+        run: npx @dappnode/dappnodesdk publish patch --provider remote --timeout 1h --all-variants
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEVELOPER_ADDRESS: "0xe75446fB7B003B66c52E7C02246bfc5281D5bD99"
