@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - "master"
-      - "v[0-9]+.[0-9]+.[0-9]+"
+    tags:
+      - "*@[0-9]+.[0-9]+.[0-9]+_*@[0-9]+.[0-9]+.[0-9]+" # Our variant tags are in the format of 'network@version_network@version'
     paths-ignore:
       - "README.md"
 
