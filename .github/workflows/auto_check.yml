@@ -15,4 +15,4 @@ jobs:
       - run: npx @dappnode/dappnodesdk github-action bump-upstream --use-variants --skip_build
 
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PANDA_OPS_BOT_PAT }}
