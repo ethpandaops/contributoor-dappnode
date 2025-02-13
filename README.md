@@ -28,6 +28,10 @@ Contributoor is a monitoring and data-gathering tool that runs alongside your be
 - [Contributoor](https://github.com/ethpandaops/contributoor)
 - [ethPandaOps](https://ethpandaops.io)
 
+### 🤝 Contributing
+
+Contributoor is part of EthPandaOps' suite of tools for Ethereum network operations. Contributions are welcome! Please check our [GitHub repository](https://github.com/ethpandaops) for more information.
+
 ---
 
 <details>
