@@ -1,8 +1,8 @@
-# <img src="avatar.png" alt="avatar" width="38" height="38" style="vertical-align: middle;"> Contributoor Dappnode Package 
+# <img src="avatar.png" alt="avatar" width="30" height="30" style="vertical-align: middle;"> Contributoor Dappnode Package 
 
 Contributoor is a monitoring and data-gathering tool that runs alongside your beacon node, helping improve Ethereum's network visibility. This DAppNode package makes it easy to run Contributoor with your existing consensus client.
 
-### Installation
+### 📦 Installation
 
 1. Setting up the Environment:
     - Ensure you're running a full, synced Ethereum node (Execution client + Consensus client).
@@ -16,13 +16,13 @@ Contributoor is a monitoring and data-gathering tool that runs alongside your be
 3. Once installed, the Contributoor package should appear in your installed packages list.
 4. The package will automatically detect your consensus client and configure itself appropriately.
 
-### Troubleshooting
+### 🤔 Troubleshooting
 
 - If the package can't detect your consensus client, verify that you have a supported client running
 - Check the package logs for any connection issues with your beacon node
 - For support, visit our [GitHub Issues](https://github.com/ethpandaops/contributoor/issues)
 
-### Links
+### 🔗 Links
 
 - [What is Contributoor?](https://ethpandaops.io/posts/contributoor-beacon-node-companion/)
 - [Contributoor](https://github.com/ethpandaops/contributoor)
@@ -31,7 +31,7 @@ Contributoor is a monitoring and data-gathering tool that runs alongside your be
 ---
 
 <details>
-<summary>Development</summary>
+<summary>🛠 Development</summary>
 
 You can get your IPFS address via the Dappnode Admin UI (Packages > System Packages > IPFS > Network). 
 There you will find your container IP, with the IPFS port being 5001 by default.
@@ -45,7 +45,7 @@ If you want to build/test for all variants, you can replace `--variant` with `--
 </details>
 
 <details>
-<summary>Publishing</summary>
+<summary>🔖 Publishing</summary>
 
 By default, every 4 hours, the `auto_check` workflow will run. This will check for new versions `contributoor` and lodge a PR here with the version bump.
 
