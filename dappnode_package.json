@@ -1,7 +1,7 @@
 {
   "name": "contributoor.dnp.dappnode.eth",
   "version": "0.1.0",
-  "upstreamVersion": "v0.0.55",
+  "upstreamVersion": "v0.0.57",
   "upstreamRepo": "ethpandaops/contributoor",
   "architectures": ["linux/amd64", "linux/arm64"],
   "license": "GPL-3.0",
