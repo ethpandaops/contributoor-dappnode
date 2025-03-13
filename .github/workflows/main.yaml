@@ -28,4 +28,4 @@ jobs:
         run: npx @dappnode/dappnodesdk publish patch --dappnode_team_preset --timeout 2h --all-variants --github-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEVELOPER_ADDRESS: "0x67e5fEB0F1d184cC189614d8903ABcadD677c1E0"
+          DEVELOPER_ADDRESS: "0x67e5feb0f1d184cc189614d8903abcadd677c1e0"
