@@ -1,6 +1,6 @@
 {
   "name": "contributoor.public.dappnode.eth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "upstreamVersion": "v0.0.57",
   "upstreamRepo": "ethpandaops/contributoor",
   "architectures": ["linux/amd64", "linux/arm64"],
