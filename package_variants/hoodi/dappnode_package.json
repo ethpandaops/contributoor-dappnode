@@ -1,0 +1,11 @@
+{
+  "name": "contributoor-hoodi.public.dappnode.eth",
+  "version": "0.1.2",
+  "type": "service",
+  "globalEnvs": [
+    {
+      "envs": ["CONSENSUS_CLIENT_HOODI", "EXECUTION_CLIENT_HOODI"],
+      "services": ["sentry"]
+    }
+  ]
+}
