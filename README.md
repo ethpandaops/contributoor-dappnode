@@ -12,6 +12,7 @@ Contributoor is a monitoring and data-gathering tool that runs alongside your be
     - Find the Contributoor package of your desired network variant. 
         - [Install for Mainnet](http://my.dappnode/installer/public/contributoor-mainnet.public.dappnode.eth) 
         - [Install for Holesky](http://my.dappnode/installer/public/contributoor-holesky.public.dappnode.eth)
+        - [Install for Hoodi](http://my.dappnode/installer/public/contributoor-hoodi.public.dappnode.eth)
     - Click 'Install'. As part of the installation process, you will be asked to provide your credentials, these would have been provided to you by ethPandaOps.
 3. Once installed, the Contributoor package should appear in your installed packages list.
 4. The package will automatically detect your consensus client and configure itself appropriately.
@@ -41,7 +42,7 @@ You can get your IPFS address via the Dappnode Admin UI (Packages > System Packa
 There you will find your container IP, with the IPFS port being 5001 by default.
 
 ```bash
-dappnodesdk build --provider=IPFS_ADDRESS:5001 --variant=[mainnet|holesky]
+dappnodesdk build --provider=IPFS_ADDRESS:5001 --variant=[mainnet|holesky|hoodi]
 ```
 
 If you want to build/test for all variants, you can replace `--variant` with `--all-variants`.
