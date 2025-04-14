@@ -38,7 +38,7 @@ case "$NETWORK" in
                 BEACON_NODE_ADDR="http://beacon-chain.lighthouse.dappnode:3500"
                 ;;
             "nimbus.dnp.dappnode.eth")
-                BEACON_NODE_ADDR="http://beacon-validator.nimbus.dappnode:4500"
+                BEACON_NODE_ADDR="http://beacon-chain.nimbus.dappnode:3500"
                 ;;
             "lodestar.dnp.dappnode.eth")
                 BEACON_NODE_ADDR="http://beacon-chain.lodestar.dappnode:3500"
@@ -61,7 +61,7 @@ case "$NETWORK" in
                 BEACON_NODE_ADDR="http://beacon-chain.lighthouse-holesky.dappnode:3500"
                 ;;
             "nimbus-holesky.dnp.dappnode.eth")
-                BEACON_NODE_ADDR="http://beacon-validator.nimbus-holesky.dappnode:4500"
+                BEACON_NODE_ADDR="http://beacon-chain.nimbus-holesky.dappnode:3500"
                 ;;
             "lodestar-holesky.dnp.dappnode.eth")
                 BEACON_NODE_ADDR="http://beacon-chain.lodestar-holesky.dappnode:3500"
@@ -81,10 +81,10 @@ case "$NETWORK" in
                 BEACON_NODE_ADDR="http://beacon-chain.teku-hoodi.dappnode:3500"
                 ;;
             "lighthouse-hoodi.dnp.dappnode.eth")
-                BEACON_NODE_ADDR="http://beacon-chain.lighthouse-holesky.dappnode:3500"
+                BEACON_NODE_ADDR="http://beacon-chain.lighthouse-hoodi.dappnode:3500"
                 ;;
             "nimbus-hoodi.dnp.dappnode.eth")
-                BEACON_NODE_ADDR="http://beacon-validator.nimbus-hoodi.dappnode:4500"
+                BEACON_NODE_ADDR="http://beacon-chain.nimbus-hoodi.dappnode:3500"
                 ;;
             "lodestar-hoodi.dnp.dappnode.eth")
                 BEACON_NODE_ADDR="http://beacon-chain.lodestar-hoodi.dappnode:3500"
