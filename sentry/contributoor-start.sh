@@ -12,6 +12,8 @@ if [ -n "$_DAPPNODE_GLOBAL_EXECUTION_CLIENT_MAINNET" ] || [ -n "$_DAPPNODE_GLOBA
     export NETWORK="mainnet"
 elif [ -n "$_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY" ] || [ -n "$_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_HOLESKY" ]; then
     export NETWORK="holesky"
+elif [ -n "$_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOODI" ] || [ -n "$_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_HOODI" ]; then
+    export NETWORK="hoodi"
 else
     echo "${ERROR} Could not determine NETWORK from DAppNode global variables"
     exit 1
@@ -36,7 +38,7 @@ case "$NETWORK" in
                 BEACON_NODE_ADDR="http://beacon-chain.lighthouse.dappnode:3500"
                 ;;
             "nimbus.dnp.dappnode.eth")
-                BEACON_NODE_ADDR="http://beacon-validator.nimbus.dappnode:4500"
+                BEACON_NODE_ADDR="http://beacon-chain.nimbus.dappnode:3500"
                 ;;
             "lodestar.dnp.dappnode.eth")
                 BEACON_NODE_ADDR="http://beacon-chain.lodestar.dappnode:3500"
@@ -59,13 +61,36 @@ case "$NETWORK" in
                 BEACON_NODE_ADDR="http://beacon-chain.lighthouse-holesky.dappnode:3500"
                 ;;
             "nimbus-holesky.dnp.dappnode.eth")
-                BEACON_NODE_ADDR="http://beacon-validator.nimbus-holesky.dappnode:4500"
+                BEACON_NODE_ADDR="http://beacon-chain.nimbus-holesky.dappnode:3500"
                 ;;
             "lodestar-holesky.dnp.dappnode.eth")
                 BEACON_NODE_ADDR="http://beacon-chain.lodestar-holesky.dappnode:3500"
                 ;;
             *)
                 echo "${ERROR} Unknown or unsupported holesky consensus client: ${CONSENSUS_CLIENT}"
+                exit 1
+                ;;
+        esac
+        ;;
+    "hoodi")
+        case "$CONSENSUS_CLIENT" in
+            "prysm-hoodi.dnp.dappnode.eth")
+                BEACON_NODE_ADDR="http://beacon-chain.prysm-hoodi.dappnode:3500"
+                ;;
+            "teku-hoodi.dnp.dappnode.eth")
+                BEACON_NODE_ADDR="http://beacon-chain.teku-hoodi.dappnode:3500"
+                ;;
+            "lighthouse-hoodi.dnp.dappnode.eth")
+                BEACON_NODE_ADDR="http://beacon-chain.lighthouse-hoodi.dappnode:3500"
+                ;;
+            "nimbus-hoodi.dnp.dappnode.eth")
+                BEACON_NODE_ADDR="http://beacon-chain.nimbus-hoodi.dappnode:3500"
+                ;;
+            "lodestar-hoodi.dnp.dappnode.eth")
+                BEACON_NODE_ADDR="http://beacon-chain.lodestar-hoodi.dappnode:3500"
+                ;;
+            *)
+                echo "${ERROR} Unknown or unsupported hoodi consensus client: ${CONSENSUS_CLIENT}"
                 exit 1
                 ;;
         esac
