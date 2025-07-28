@@ -4,7 +4,7 @@ services:
     build:
       context: sentry
       args:
-        UPSTREAM_VERSION: v0.0.64
+        UPSTREAM_VERSION: v0.0.69
     restart: unless-stopped
     environment:
       - CONTRIBUTOOR_USERNAME
