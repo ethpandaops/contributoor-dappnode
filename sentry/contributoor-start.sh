@@ -107,6 +107,14 @@ echo "${INFO} - NETWORK: ${NETWORK}"
 echo "${INFO} - CONSENSUS_CLIENT: ${CONSENSUS_CLIENT}"
 echo "${INFO} - CONTRIBUTOOR_USERNAME: ${CONTRIBUTOOR_USERNAME}"
 echo "${INFO} - BEACON_URL: ${BEACON_NODE_ADDR}"
+echo "${INFO} - ATTESTATION_CONTRIBUTION: ${CONTRIBUTOOR_ATTESTATION_CONTRIBUTION:-false}"
+
+# Build attestation flag if enabled
+ATTESTATION_FLAG=""
+if [ "${CONTRIBUTOOR_ATTESTATION_CONTRIBUTION}" = "true" ]; then
+    ATTESTATION_FLAG="--attestation-subnet-check-enabled"
+    echo "${INFO} Attestation contribution enabled"
+fi
 
 # Run contributoor.
 exec /usr/local/bin/contributoor --network "${NETWORK}" \
@@ -115,4 +123,5 @@ exec /usr/local/bin/contributoor --network "${NETWORK}" \
     --username "${CONTRIBUTOOR_USERNAME}" \
     --password "${CONTRIBUTOOR_PASSWORD}" \
     --output-server-address "xatu.primary.production.platform.ethpandaops.io:443" \
-    --output-server-tls "true"
+    --output-server-tls "true" \
+    ${ATTESTATION_FLAG}

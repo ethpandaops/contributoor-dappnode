@@ -20,3 +20,16 @@ fields:
       Password for the contributoor service
     required: true
     secret: true
+
+  - id: contributoor_attestation_contribution
+    target:
+      type: environment
+      name: CONTRIBUTOOR_ATTESTATION_CONTRIBUTION
+      service: sentry
+    title: Contribute attestation data
+    description: >-
+      Contributing attestation data helps improve network analysis but will use a little more bandwidth. This feature is opt-in.
+    required: false
+    enum:
+      - "true"
+      - "false"
