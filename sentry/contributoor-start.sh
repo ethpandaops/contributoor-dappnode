@@ -10,8 +10,6 @@ INFO="[ INFO ]"
 # Determine NETWORK based on which client variables are set.
 if [ -n "$_DAPPNODE_GLOBAL_EXECUTION_CLIENT_MAINNET" ] || [ -n "$_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_MAINNET" ]; then
     export NETWORK="mainnet"
-elif [ -n "$_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOLESKY" ] || [ -n "$_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_HOLESKY" ]; then
-    export NETWORK="holesky"
 elif [ -n "$_DAPPNODE_GLOBAL_EXECUTION_CLIENT_HOODI" ] || [ -n "$_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_HOODI" ]; then
     export NETWORK="hoodi"
 else
@@ -45,29 +43,6 @@ case "$NETWORK" in
                 ;;
             *)
                 echo "${ERROR} Unknown or unsupported mainnet consensus client: ${CONSENSUS_CLIENT}"
-                exit 1
-                ;;
-        esac
-        ;;
-    "holesky")
-        case "$CONSENSUS_CLIENT" in
-            "prysm-holesky.dnp.dappnode.eth")
-                BEACON_NODE_ADDR="http://beacon-chain.prysm-holesky.dappnode:3500"
-                ;;
-            "teku-holesky.dnp.dappnode.eth")
-                BEACON_NODE_ADDR="http://beacon-chain.teku-holesky.dappnode:3500"
-                ;;
-            "lighthouse-holesky.dnp.dappnode.eth")
-                BEACON_NODE_ADDR="http://beacon-chain.lighthouse-holesky.dappnode:3500"
-                ;;
-            "nimbus-holesky.dnp.dappnode.eth")
-                BEACON_NODE_ADDR="http://beacon-chain.nimbus-holesky.dappnode:3500"
-                ;;
-            "lodestar-holesky.dnp.dappnode.eth")
-                BEACON_NODE_ADDR="http://beacon-chain.lodestar-holesky.dappnode:3500"
-                ;;
-            *)
-                echo "${ERROR} Unknown or unsupported holesky consensus client: ${CONSENSUS_CLIENT}"
                 exit 1
                 ;;
         esac
