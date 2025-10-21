@@ -9,9 +9,8 @@ Contributoor is a monitoring and data-gathering tool that runs alongside your be
     - If you are not running a full Ethereum node yet, go to the Stakers Menu, select your clients and apply the configuration to start synchronization.
 2. Package Installation:
     - In your Dappnode's UI, navigate to the DAppStore.
-    - Find the Contributoor package of your desired network variant. 
-        - [Install for Mainnet](http://my.dappnode/installer/public/contributoor-mainnet.public.dappnode.eth) 
-        - [Install for Holesky](http://my.dappnode/installer/public/contributoor-holesky.public.dappnode.eth)
+    - Find the Contributoor package of your desired network variant.
+        - [Install for Mainnet](http://my.dappnode/installer/public/contributoor-mainnet.public.dappnode.eth)
         - [Install for Hoodi](http://my.dappnode/installer/public/contributoor-hoodi.public.dappnode.eth)
     - Click 'Install'. As part of the installation process, you will be asked to provide your credentials, these would have been provided to you by ethPandaOps.
 3. Once installed, the Contributoor package should appear in your installed packages list.
@@ -42,7 +41,7 @@ You can get your IPFS address via the Dappnode Admin UI (Packages > System Packa
 There you will find your container IP, with the IPFS port being 5001 by default.
 
 ```bash
-dappnodesdk build --provider=IPFS_ADDRESS:5001 --variant=[mainnet|holesky|hoodi]
+dappnodesdk build --provider=IPFS_ADDRESS:5001 --variant=[mainnet|hoodi]
 ```
 
 If you want to build/test for all variants, you can replace `--variant` with `--all-variants`.
