@@ -1,6 +1,6 @@
 {
   "name": "contributoor-mainnet.public.dappnode.eth",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "type": "service",
   "globalEnvs": [
     {
