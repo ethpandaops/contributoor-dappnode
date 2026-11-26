@@ -51,7 +51,7 @@ If you want to build/test for all variants, you can replace `--variant` with `--
 <details>
 <summary>🔖 Publishing</summary>
 
-By default, every 4 hours, the `auto_check` workflow will run. This will check for new versions `contributoor` and lodge a PR here with the version bump.
+To publish a new `contributoor` version, open a PR here that bumps the upstream `contributoor` version.
 
 Once merged, the `main` workflow will run and publish a new version of the package. This will create a "pre-release". These pre-releases can be tested by searching the IPFS hash DAppStore within the Dappnode Admin UI (DAppNode > Dnp).
 
